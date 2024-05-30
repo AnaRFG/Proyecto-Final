@@ -1,7 +1,7 @@
-# Proyecto Final Programación II
-## Sistema de Noticias
+# Proyecto Final Programación II 🦢
+## Sistema de Noticias 🕊️
 
-| Clave UCC | Autores           |
+| Clave UCC | Autores   💻      |
 | --------- | --------------    |
 | 2316635   | Araya, Mariano J. |
 | 2304151   | Funes G., Ana R.  |
