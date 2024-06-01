@@ -1,3 +1,3 @@
-C:/Users/araya/Desktop/Proyecto/cmake-build-debug/CMakeFiles/Proyecto.dir
-C:/Users/araya/Desktop/Proyecto/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/araya/Desktop/Proyecto/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/araya/Desktop/Proyecto/Proyecto-Final/cmake-build-debug/CMakeFiles/Proyecto.dir
+C:/Users/araya/Desktop/Proyecto/Proyecto-Final/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/araya/Desktop/Proyecto/Proyecto-Final/cmake-build-debug/CMakeFiles/rebuild_cache.dir
