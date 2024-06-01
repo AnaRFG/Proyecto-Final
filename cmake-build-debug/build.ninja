@@ -73,6 +73,39 @@ build Proyecto.exe: CXX_EXECUTABLE_LINKER__Proyecto_Debug CMakeFiles/Proyecto.di
   TARGET_IMPLIB = libProyecto.dll.a
   TARGET_PDB = Proyecto.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target Clases
+
+
+#############################################
+# Order-only phony target for Clases
+
+build cmake_object_order_depends_target_Clases: phony || CMakeFiles/Clases.dir
+
+build CMakeFiles/Clases.dir/Clases.cpp.obj: CXX_COMPILER__Clases_unscanned_Debug C$:/Users/araya/Desktop/Proyecto/Proyecto-Final/Clases.cpp || cmake_object_order_depends_target_Clases
+  DEP_FILE = CMakeFiles\Clases.dir\Clases.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Clases.dir
+  OBJECT_FILE_DIR = CMakeFiles\Clases.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Clases
+
+
+#############################################
+# Link the executable Clases.exe
+
+build Clases.exe: CXX_EXECUTABLE_LINKER__Clases_Debug CMakeFiles/Clases.dir/Clases.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Clases.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Clases.exe
+  TARGET_IMPLIB = libClases.dll.a
+  TARGET_PDB = Clases.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -99,6 +132,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build Clases: phony Clases.exe
+
 build Proyecto: phony Proyecto.exe
 
 # =============================================================================
@@ -109,7 +144,7 @@ build Proyecto: phony Proyecto.exe
 #############################################
 # Folder: C:/Users/araya/Desktop/Proyecto/Proyecto-Final/cmake-build-debug
 
-build all: phony Proyecto.exe
+build all: phony Proyecto.exe Clases.exe
 
 # =============================================================================
 # Built-in targets
