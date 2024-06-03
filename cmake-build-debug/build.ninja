@@ -41,39 +41,6 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Users/araya/Desktop/Proyecto/Proyecto-Final/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target Proyecto
-
-
-#############################################
-# Order-only phony target for Proyecto
-
-build cmake_object_order_depends_target_Proyecto: phony || CMakeFiles/Proyecto.dir
-
-build CMakeFiles/Proyecto.dir/main.cpp.obj: CXX_COMPILER__Proyecto_unscanned_Debug C$:/Users/araya/Desktop/Proyecto/Proyecto-Final/main.cpp || cmake_object_order_depends_target_Proyecto
-  DEP_FILE = CMakeFiles\Proyecto.dir\main.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\Proyecto.dir
-  OBJECT_FILE_DIR = CMakeFiles\Proyecto.dir
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target Proyecto
-
-
-#############################################
-# Link the executable Proyecto.exe
-
-build Proyecto.exe: CXX_EXECUTABLE_LINKER__Proyecto_Debug CMakeFiles/Proyecto.dir/main.cpp.obj
-  FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\Proyecto.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = Proyecto.exe
-  TARGET_IMPLIB = libProyecto.dll.a
-  TARGET_PDB = Proyecto.exe.dbg
-
-# =============================================================================
 # Object build statements for EXECUTABLE target Clases
 
 
@@ -106,6 +73,105 @@ build Clases.exe: CXX_EXECUTABLE_LINKER__Clases_Debug CMakeFiles/Clases.dir/Clas
   TARGET_IMPLIB = libClases.dll.a
   TARGET_PDB = Clases.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target Proyecto
+
+
+#############################################
+# Order-only phony target for Proyecto
+
+build cmake_object_order_depends_target_Proyecto: phony || CMakeFiles/Proyecto.dir
+
+build CMakeFiles/Proyecto.dir/Proyecto.cpp.obj: CXX_COMPILER__Proyecto_unscanned_Debug C$:/Users/araya/Desktop/Proyecto/Proyecto-Final/Proyecto.cpp || cmake_object_order_depends_target_Proyecto
+  DEP_FILE = CMakeFiles\Proyecto.dir\Proyecto.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Proyecto.dir
+  OBJECT_FILE_DIR = CMakeFiles\Proyecto.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Proyecto
+
+
+#############################################
+# Link the executable Proyecto.exe
+
+build Proyecto.exe: CXX_EXECUTABLE_LINKER__Proyecto_Debug CMakeFiles/Proyecto.dir/Proyecto.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Proyecto.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Proyecto.exe
+  TARGET_IMPLIB = libProyecto.dll.a
+  TARGET_PDB = Proyecto.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Persona
+
+
+#############################################
+# Order-only phony target for Persona
+
+build cmake_object_order_depends_target_Persona: phony || CMakeFiles/Persona.dir
+
+build CMakeFiles/Persona.dir/Persona.cpp.obj: CXX_COMPILER__Persona_unscanned_Debug C$:/Users/araya/Desktop/Proyecto/Proyecto-Final/Persona.cpp || cmake_object_order_depends_target_Persona
+  DEP_FILE = CMakeFiles\Persona.dir\Persona.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Persona.dir
+  OBJECT_FILE_DIR = CMakeFiles\Persona.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Persona
+
+
+#############################################
+# Link the executable Persona.exe
+
+build Persona.exe: CXX_EXECUTABLE_LINKER__Persona_Debug CMakeFiles/Persona.dir/Persona.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Persona.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Persona.exe
+  TARGET_IMPLIB = libPersona.dll.a
+  TARGET_PDB = Persona.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Usuario
+
+
+#############################################
+# Order-only phony target for Usuario
+
+build cmake_object_order_depends_target_Usuario: phony || CMakeFiles/Usuario.dir
+
+build CMakeFiles/Usuario.dir/Usuario.cpp.obj: CXX_COMPILER__Usuario_unscanned_Debug C$:/Users/araya/Desktop/Proyecto/Proyecto-Final/Usuario.cpp || cmake_object_order_depends_target_Usuario
+  DEP_FILE = CMakeFiles\Usuario.dir\Usuario.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Usuario.dir
+  OBJECT_FILE_DIR = CMakeFiles\Usuario.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Usuario
+
+
+#############################################
+# Link the executable Usuario.exe
+
+build Usuario.exe: CXX_EXECUTABLE_LINKER__Usuario_Debug CMakeFiles/Usuario.dir/Usuario.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Usuario.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Usuario.exe
+  TARGET_IMPLIB = libUsuario.dll.a
+  TARGET_PDB = Usuario.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -134,7 +200,11 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build Clases: phony Clases.exe
 
+build Persona: phony Persona.exe
+
 build Proyecto: phony Proyecto.exe
+
+build Usuario: phony Usuario.exe
 
 # =============================================================================
 # Folder targets.
@@ -144,7 +214,7 @@ build Proyecto: phony Proyecto.exe
 #############################################
 # Folder: C:/Users/araya/Desktop/Proyecto/Proyecto-Final/cmake-build-debug
 
-build all: phony Proyecto.exe Clases.exe
+build all: phony Clases.exe Proyecto.exe Persona.exe Usuario.exe
 
 # =============================================================================
 # Built-in targets

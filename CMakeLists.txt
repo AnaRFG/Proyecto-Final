@@ -3,5 +3,7 @@ project(Proyecto)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Proyecto main.cpp)
 add_executable(Clases Clases.cpp)
+add_executable(Proyecto Proyecto.cpp)
+add_executable(Persona Persona.cpp)
+add_executable(Usuario Usuario.cpp)

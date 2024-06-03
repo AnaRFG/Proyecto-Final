@@ -11,27 +11,24 @@ protected:
     string nombre;
 public:
     Persona(int id, string nom);
+    void setDNI(int id);
+    int getDNI();
+    void setNombre(string nom);
+    string getNombre();
 };
 
-//
-class Autor : Persona {
+
+class Autor : public Persona {
 private:
     string medio;
-    int noticias;
-    Noticia* noticias[10];
 public:
     Autor(int id, string nom, string med);
     Autor();
     ~Autor();
-    string getDNI();
-    void setDNI(string id);
-    string getNombre();
-    void setNombre(string nom);
     string getMedio();
     void setMedio(string med);
-
-    // Método para agregar una noticia al autor
-    void agregarNoticia(Noticia* noticia);
+    string getAutor();
+    void mostrarDatos();
 };
 
 
@@ -58,14 +55,19 @@ public:
     int getMes();
     void setAutor(Autor* autor);
     Autor* getAutor();
+    void mostrarNoticia();
 };
 
 
-class Usuario : Persona {
+class Usuario : public Persona {
 private:
     int edad;
 public:
-    Usuario(int dni, string name, int edad);
+    Usuario(int id, string nom, int e);
+    int getEdad();
+    void setEdad(int e);
+    string getAutor();
+    void mostrarUsuario();
 };
 
 
@@ -74,5 +76,5 @@ private:
     int numero;
     string texto;
 public:
-    Comentarios(int num, string tex, Usuario usuario,int id, string nom, int ed );
+    Comentarios(int id, string nom, int e, int num, string tex, Usuario usuario);
 };
