@@ -1,0 +1,68 @@
+// Función para mostrar el menú principal
+void mostrarMenu() {
+  cout << "Bienvenido al Sistema de Noticias";
+  cout << "1. Ingresar como Lector";
+  cout << "2. Ingresar como Autor";
+  cout << "3. Salir";
+  cout << "Ingrese su opción: ";
+}
+
+// Función para la acción del lector
+void accionLector() {
+  // Abrir archivo de noticias para lectura
+  ifstream archivoNoticias("noticias.txt");
+
+  if (archivoNoticias.is_open()) {
+    string linea;
+    while (getline(archivoNoticias, linea)) {
+      cout << linea << endl;
+    }
+    archivoNoticias.close();
+  } else {
+    cout << "Error al abrir el archivo de noticias." << endl;
+  }
+
+  // Preguntar si desea volver al menú principal
+  string respuesta;
+  cout << "¿Desea volver al menú principal? : ";
+  cin >> respuesta;
+  if (respuesta == 'si' || respuesta == 'SI') {
+    mostrarMenu();
+  }
+}
+
+// Función para la acción del autor
+
+
+// Preguntar si desea volver al menú principal
+  cout << "¿Desea volver al menú principal? (s/n): ";
+  char respuesta;
+  cin >> respuesta;
+  if (respuesta == 's' || respuesta == 'S') {
+    mostrarMenu();
+  }
+}
+
+int main() {
+  int opcion;
+
+  do {
+    mostrarMenu();
+    cin >> opcion;
+    switch (opcion) {
+      case 1:
+        accionLector();
+        break;
+      case 2:
+        accionAutor();
+        break;
+      case 3:
+        cout << "Salir del Sistema de Noticias";
+        break;
+      default:
+        cout << "Opción no válida. Intente nuevamente." << endl;
+    }
+  } while (opcion != 3);
+
+  return 0;
+}
