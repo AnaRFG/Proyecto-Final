@@ -36,12 +36,12 @@ class Noticia {
 private:
     string titulo;
     string descripcion;
-    Autor* autor;
     int año;
     int mes;
     int dia;
+    Autor autor;
 public:
-    Noticia(string tit, string desc, Autor* autor, int a, int m, int d);
+    Noticia(string tit, string desc,Autor autor, int a, int m, int d);
     ~Noticia();
     void setTitulo(string tit);
     string getTitulo();
@@ -53,8 +53,6 @@ public:
     int getAño();
     void setMes(int m);
     int getMes();
-    void setAutor(Autor* autor);
-    Autor* getAutor();
     void mostrarNoticia();
 };
 
