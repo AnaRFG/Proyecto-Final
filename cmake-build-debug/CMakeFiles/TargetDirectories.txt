@@ -1,6 +1,5 @@
-C:/Users/araya/Desktop/Proyecto/Proyecto-Final/cmake-build-debug/CMakeFiles/Clases.dir
-C:/Users/araya/Desktop/Proyecto/Proyecto-Final/cmake-build-debug/CMakeFiles/Proyecto.dir
-C:/Users/araya/Desktop/Proyecto/Proyecto-Final/cmake-build-debug/CMakeFiles/Persona.dir
-C:/Users/araya/Desktop/Proyecto/Proyecto-Final/cmake-build-debug/CMakeFiles/Usuario.dir
-C:/Users/araya/Desktop/Proyecto/Proyecto-Final/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/araya/Desktop/Proyecto/Proyecto-Final/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Usuario/Desktop/program2/Proyecto-Final/cmake-build-debug/CMakeFiles/Clases.dir
+C:/Users/Usuario/Desktop/program2/Proyecto-Final/cmake-build-debug/CMakeFiles/Proyecto.dir
+C:/Users/Usuario/Desktop/program2/Proyecto-Final/cmake-build-debug/CMakeFiles/main.dir
+C:/Users/Usuario/Desktop/program2/Proyecto-Final/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Usuario/Desktop/program2/Proyecto-Final/cmake-build-debug/CMakeFiles/rebuild_cache.dir
