@@ -7,7 +7,7 @@
 | 2304151   | Funes G., Ana R.  |
 | 2321544   | Sanchez, Jazmín M.|
 
-### Consigna:
+### Consigna: :penguin:
 El sitio de noticias NEWS desea realizar un software para administrar los artículos que se
 deben publicar. Cada artículo es creado por un autor, el cual debe estar registrado en el
 sistema. La empresa desea que cada artículo pueda ser comentado por los lectores y para
