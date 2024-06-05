@@ -53,10 +53,9 @@ void Autor::mostrarDatos() {
 
 
 //Constructor de la clase Noticia
-Noticia::Noticia(string tit, string desc, Autor* autor, int a, int m, int d) {
+Noticia::Noticia(string tit, string desc,Autor autor, int a, int m, int d) {
     titulo = tit;
     descripcion = desc;
-    autor = autor;
     año = a;
     mes = m;
     dia = d;
@@ -106,20 +105,12 @@ int Noticia::getAño() {
     return año;
 }
 
-void Noticia::setAutor(Autor* autor) {
-    autor = autor;
-}
-
-Autor* Noticia::getAutor() {
-    return autor;
-}
-
 void Noticia::mostrarNoticia(){
         cout << "Noticia:" << endl;
         cout << "Título: " << titulo << endl;
         cout << "Detalle: " << descripcion << endl;
         cout << "Fecha: " << dia << "/" << mes << "/" << año << endl;
-        cout << "Autor: " << autor:getNombre() << " (" << autor:getMedio() << ")" << endl;
+        cout << "Autor: " << autor.getNombre() << " (" << autor.getMedio() << ")" << endl;
 }
 
 
