@@ -107,39 +107,6 @@ build Proyecto.exe: CXX_EXECUTABLE_LINKER__Proyecto_Debug CMakeFiles/Proyecto.di
   TARGET_PDB = Proyecto.exe.dbg
 
 # =============================================================================
-# Object build statements for EXECUTABLE target main
-
-
-#############################################
-# Order-only phony target for main
-
-build cmake_object_order_depends_target_main: phony || CMakeFiles/main.dir
-
-build CMakeFiles/main.dir/main.cpp.obj: CXX_COMPILER__main_unscanned_Debug C$:/Users/Usuario/Desktop/program2/Proyecto-Final/main.cpp || cmake_object_order_depends_target_main
-  DEP_FILE = CMakeFiles\main.dir\main.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\main.dir
-  OBJECT_FILE_DIR = CMakeFiles\main.dir
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target main
-
-
-#############################################
-# Link the executable main.exe
-
-build main.exe: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/main.cpp.obj
-  FLAGS = -g
-  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
-  OBJECT_DIR = CMakeFiles\main.dir
-  POST_BUILD = cd .
-  PRE_LINK = cd .
-  TARGET_FILE = main.exe
-  TARGET_IMPLIB = libmain.dll.a
-  TARGET_PDB = main.exe.dbg
-
-# =============================================================================
 # Object build statements for EXECUTABLE target autor
 
 
@@ -340,8 +307,6 @@ build autor: phony autor.exe
 
 build comentario: phony comentario.exe
 
-build main: phony main.exe
-
 build noticia: phony noticia.exe
 
 build usuario: phony usuario.exe
@@ -354,7 +319,7 @@ build usuario: phony usuario.exe
 #############################################
 # Folder: C:/Users/Usuario/Desktop/program2/Proyecto-Final/cmake-build-debug
 
-build all: phony Clases.exe Proyecto.exe main.exe autor.exe Persona.exe usuario.exe noticia.exe comentario.exe
+build all: phony Clases.exe Proyecto.exe autor.exe Persona.exe usuario.exe noticia.exe comentario.exe
 
 # =============================================================================
 # Built-in targets

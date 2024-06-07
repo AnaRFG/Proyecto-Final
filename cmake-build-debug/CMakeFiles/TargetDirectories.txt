@@ -1,6 +1,5 @@
 C:/Users/Usuario/Desktop/program2/Proyecto-Final/cmake-build-debug/CMakeFiles/Clases.dir
 C:/Users/Usuario/Desktop/program2/Proyecto-Final/cmake-build-debug/CMakeFiles/Proyecto.dir
-C:/Users/Usuario/Desktop/program2/Proyecto-Final/cmake-build-debug/CMakeFiles/main.dir
 C:/Users/Usuario/Desktop/program2/Proyecto-Final/cmake-build-debug/CMakeFiles/autor.dir
 C:/Users/Usuario/Desktop/program2/Proyecto-Final/cmake-build-debug/CMakeFiles/Persona.dir
 C:/Users/Usuario/Desktop/program2/Proyecto-Final/cmake-build-debug/CMakeFiles/usuario.dir
