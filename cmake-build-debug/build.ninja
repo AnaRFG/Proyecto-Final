@@ -82,8 +82,8 @@ build Clases.exe: CXX_EXECUTABLE_LINKER__Clases_Debug CMakeFiles/Clases.dir/Clas
 
 build cmake_object_order_depends_target_Proyecto: phony || CMakeFiles/Proyecto.dir
 
-build CMakeFiles/Proyecto.dir/Proyecto.cpp.obj: CXX_COMPILER__Proyecto_unscanned_Debug C$:/Users/Usuario/Desktop/program2/Proyecto-Final/Proyecto.cpp || cmake_object_order_depends_target_Proyecto
-  DEP_FILE = CMakeFiles\Proyecto.dir\Proyecto.cpp.obj.d
+build CMakeFiles/Proyecto.dir/NEWS.cpp.obj: CXX_COMPILER__Proyecto_unscanned_Debug C$:/Users/Usuario/Desktop/program2/Proyecto-Final/NEWS.cpp || cmake_object_order_depends_target_Proyecto
+  DEP_FILE = CMakeFiles\Proyecto.dir\NEWS.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Proyecto.dir
   OBJECT_FILE_DIR = CMakeFiles\Proyecto.dir
@@ -96,7 +96,7 @@ build CMakeFiles/Proyecto.dir/Proyecto.cpp.obj: CXX_COMPILER__Proyecto_unscanned
 #############################################
 # Link the executable Proyecto.exe
 
-build Proyecto.exe: CXX_EXECUTABLE_LINKER__Proyecto_Debug CMakeFiles/Proyecto.dir/Proyecto.cpp.obj
+build Proyecto.exe: CXX_EXECUTABLE_LINKER__Proyecto_Debug CMakeFiles/Proyecto.dir/NEWS.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Proyecto.dir
@@ -139,6 +139,171 @@ build main.exe: CXX_EXECUTABLE_LINKER__main_Debug CMakeFiles/main.dir/main.cpp.o
   TARGET_IMPLIB = libmain.dll.a
   TARGET_PDB = main.exe.dbg
 
+# =============================================================================
+# Object build statements for EXECUTABLE target autor
+
+
+#############################################
+# Order-only phony target for autor
+
+build cmake_object_order_depends_target_autor: phony || CMakeFiles/autor.dir
+
+build CMakeFiles/autor.dir/autor.cpp.obj: CXX_COMPILER__autor_unscanned_Debug C$:/Users/Usuario/Desktop/program2/Proyecto-Final/autor.cpp || cmake_object_order_depends_target_autor
+  DEP_FILE = CMakeFiles\autor.dir\autor.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\autor.dir
+  OBJECT_FILE_DIR = CMakeFiles\autor.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target autor
+
+
+#############################################
+# Link the executable autor.exe
+
+build autor.exe: CXX_EXECUTABLE_LINKER__autor_Debug CMakeFiles/autor.dir/autor.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\autor.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = autor.exe
+  TARGET_IMPLIB = libautor.dll.a
+  TARGET_PDB = autor.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target Persona
+
+
+#############################################
+# Order-only phony target for Persona
+
+build cmake_object_order_depends_target_Persona: phony || CMakeFiles/Persona.dir
+
+build CMakeFiles/Persona.dir/Persona.cpp.obj: CXX_COMPILER__Persona_unscanned_Debug C$:/Users/Usuario/Desktop/program2/Proyecto-Final/Persona.cpp || cmake_object_order_depends_target_Persona
+  DEP_FILE = CMakeFiles\Persona.dir\Persona.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Persona.dir
+  OBJECT_FILE_DIR = CMakeFiles\Persona.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target Persona
+
+
+#############################################
+# Link the executable Persona.exe
+
+build Persona.exe: CXX_EXECUTABLE_LINKER__Persona_Debug CMakeFiles/Persona.dir/Persona.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\Persona.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = Persona.exe
+  TARGET_IMPLIB = libPersona.dll.a
+  TARGET_PDB = Persona.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target usuario
+
+
+#############################################
+# Order-only phony target for usuario
+
+build cmake_object_order_depends_target_usuario: phony || CMakeFiles/usuario.dir
+
+build CMakeFiles/usuario.dir/usuario.cpp.obj: CXX_COMPILER__usuario_unscanned_Debug C$:/Users/Usuario/Desktop/program2/Proyecto-Final/usuario.cpp || cmake_object_order_depends_target_usuario
+  DEP_FILE = CMakeFiles\usuario.dir\usuario.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\usuario.dir
+  OBJECT_FILE_DIR = CMakeFiles\usuario.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target usuario
+
+
+#############################################
+# Link the executable usuario.exe
+
+build usuario.exe: CXX_EXECUTABLE_LINKER__usuario_Debug CMakeFiles/usuario.dir/usuario.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\usuario.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = usuario.exe
+  TARGET_IMPLIB = libusuario.dll.a
+  TARGET_PDB = usuario.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target noticia
+
+
+#############################################
+# Order-only phony target for noticia
+
+build cmake_object_order_depends_target_noticia: phony || CMakeFiles/noticia.dir
+
+build CMakeFiles/noticia.dir/noticia.cpp.obj: CXX_COMPILER__noticia_unscanned_Debug C$:/Users/Usuario/Desktop/program2/Proyecto-Final/noticia.cpp || cmake_object_order_depends_target_noticia
+  DEP_FILE = CMakeFiles\noticia.dir\noticia.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\noticia.dir
+  OBJECT_FILE_DIR = CMakeFiles\noticia.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target noticia
+
+
+#############################################
+# Link the executable noticia.exe
+
+build noticia.exe: CXX_EXECUTABLE_LINKER__noticia_Debug CMakeFiles/noticia.dir/noticia.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\noticia.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = noticia.exe
+  TARGET_IMPLIB = libnoticia.dll.a
+  TARGET_PDB = noticia.exe.dbg
+
+# =============================================================================
+# Object build statements for EXECUTABLE target comentario
+
+
+#############################################
+# Order-only phony target for comentario
+
+build cmake_object_order_depends_target_comentario: phony || CMakeFiles/comentario.dir
+
+build CMakeFiles/comentario.dir/comentario.cpp.obj: CXX_COMPILER__comentario_unscanned_Debug C$:/Users/Usuario/Desktop/program2/Proyecto-Final/comentario.cpp || cmake_object_order_depends_target_comentario
+  DEP_FILE = CMakeFiles\comentario.dir\comentario.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\comentario.dir
+  OBJECT_FILE_DIR = CMakeFiles\comentario.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target comentario
+
+
+#############################################
+# Link the executable comentario.exe
+
+build comentario.exe: CXX_EXECUTABLE_LINKER__comentario_Debug CMakeFiles/comentario.dir/comentario.cpp.obj
+  FLAGS = -g
+  LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  OBJECT_DIR = CMakeFiles\comentario.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = comentario.exe
+  TARGET_IMPLIB = libcomentario.dll.a
+  TARGET_PDB = comentario.exe.dbg
+
 
 #############################################
 # Utility command for edit_cache
@@ -167,9 +332,19 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build Clases: phony Clases.exe
 
+build Persona: phony Persona.exe
+
 build Proyecto: phony Proyecto.exe
 
+build autor: phony autor.exe
+
+build comentario: phony comentario.exe
+
 build main: phony main.exe
+
+build noticia: phony noticia.exe
+
+build usuario: phony usuario.exe
 
 # =============================================================================
 # Folder targets.
@@ -179,7 +354,7 @@ build main: phony main.exe
 #############################################
 # Folder: C:/Users/Usuario/Desktop/program2/Proyecto-Final/cmake-build-debug
 
-build all: phony Clases.exe Proyecto.exe main.exe
+build all: phony Clases.exe Proyecto.exe main.exe autor.exe Persona.exe usuario.exe noticia.exe comentario.exe
 
 # =============================================================================
 # Built-in targets
