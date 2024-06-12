@@ -1,5 +1,5 @@
 #include <iostream>
-#include "autor.h"
+#include "Autor.h"
 #include "Persona.h"
 using namespace std;
 

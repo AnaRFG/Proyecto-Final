@@ -1,5 +1,5 @@
 #include <iostream>
-#include "usuario.h"
+#include "Usuario.h"
 
 using namespace std;
 

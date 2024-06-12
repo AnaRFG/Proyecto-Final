@@ -1,3 +1,3 @@
 #include <iostream>
-#include "archivero.h"
+#include "Archivero.h"
  using namespace std;

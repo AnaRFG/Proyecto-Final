@@ -1,8 +1,8 @@
 #include <iostream>
 #include "Persona.h"
-#include "autor.h"
-#include "comentario.h"
-#include "usuario.h"
+#include "Autor.h"
+#include "Comentario.h"
+#include "Usuario.h"
 using namespace std;
 
 class Noticia {

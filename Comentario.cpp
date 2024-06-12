@@ -1,5 +1,5 @@
 #include <iostream>
-#include "comentario.h"
+#include "Comentario.h"
 
 using namespace std;
 
