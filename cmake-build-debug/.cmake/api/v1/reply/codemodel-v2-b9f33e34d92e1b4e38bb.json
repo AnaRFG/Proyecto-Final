@@ -21,7 +21,8 @@
 						3,
 						4,
 						5,
-						6
+						6,
+						7
 					]
 				}
 			],
@@ -42,7 +43,8 @@
 						3,
 						4,
 						5,
-						6
+						6,
+						7
 					]
 				}
 			],
@@ -57,6 +59,13 @@
 				},
 				{
 					"directoryIndex" : 0,
+					"id" : "NEWS::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-NEWS-Debug-ff51fcfb1c7cbad5865b.json",
+					"name" : "NEWS",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "Persona::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-Persona-Debug-da498a8b4494507928c7.json",
 					"name" : "Persona",
@@ -64,9 +73,9 @@
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "Proyecto::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Proyecto-Debug-ea862dda8f53aa097702.json",
-					"name" : "Proyecto",
+					"id" : "archivero::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-archivero-Debug-71d126ff76047698d080.json",
+					"name" : "archivero",
 					"projectIndex" : 0
 				},
 				{
