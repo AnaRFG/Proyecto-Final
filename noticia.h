@@ -1,8 +1,8 @@
 #include <iostream>
 #include "Persona.h"
-#include "autor.h"
-#include "comentario.h"
-#include "usuario.h"
+#include "Autor.h"
+#include "Comentario.h"
+#include "Usuario.h"
 using namespace std;
 
 class Noticia {
@@ -13,9 +13,10 @@ private:
     int mes;
     int dia;
     Autor autor;
+    Comentarios comentarios;
 public:
-    Noticia(string tit, string desc,Autor autor, int a, int m, int d);
-    ~Noticia();
+    Noticia(string tit, string desc, int a, int m, int d,Autor autor,Comentarios comentarios);
+    //~Noticia();
     void setTitulo(string tit);
     string getTitulo();
     void setDescripcion(string desc);
@@ -26,5 +27,6 @@ public:
     int getAño();
     void setMes(int m);
     int getMes();
-    void mostrarNoticia();
+
+    //void mostrarNoticia();
 };

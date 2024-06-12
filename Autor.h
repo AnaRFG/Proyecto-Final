@@ -12,7 +12,6 @@ public:
     ~Autor();
     string getMedio();
     void setMedio(string med);
-    string getAutor();
-    void mostrarDatos();
+    //void getAutor();
 };
 
