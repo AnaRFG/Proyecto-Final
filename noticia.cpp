@@ -1,12 +1,4 @@
 #include <iostream>
-#include "Clases.h"
-
+#include "noticia.h"
 using namespace std;
 
-int main(){
-
-
-
-
-
-}

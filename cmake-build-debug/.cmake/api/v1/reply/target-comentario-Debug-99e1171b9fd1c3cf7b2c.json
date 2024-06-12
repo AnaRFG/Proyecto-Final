@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Proyecto.exe"
+			"path" : "comentario.exe"
 		},
 		{
-			"path" : "Proyecto.pdb"
+			"path" : "comentario.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -27,7 +27,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 7,
+				"line" : 12,
 				"parent" : 0
 			}
 		]
@@ -56,7 +56,7 @@
 			]
 		}
 	],
-	"id" : "Proyecto::@6890427a1f51a3e7e1df",
+	"id" : "comentario::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -76,8 +76,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "Proyecto",
-	"nameOnDisk" : "Proyecto.exe",
+	"name" : "comentario",
+	"nameOnDisk" : "comentario.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -98,7 +98,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Proyecto.cpp",
+			"path" : "comentario.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
