@@ -1,13 +1,20 @@
 # Proyecto Final Programación II 🦢
 ## Sistema de Noticias 🕊️
 
+# Indice
+- [Proyecto Final Programación](#Proyecto-Final-Programación-II)
+    - [Consigna](#consigna-)
+        - [Consideraciones](#consideraciones)
+        - [Desarrollo del Programa](#desarrollo-del-programa)
+        - [Clases utilizadas](#clases-utilizadas)
+
 | Clave UCC | Autores   💻      |
 | --------- | --------------    |
 | 2316635   | Araya, Mariano J. |
 | 2304151   | Funes G., Ana R.  |
 | 2321544   | Sanchez, Jazmín M.|
 
-### Consigna: :penguin:
+### Consigna: 
 El sitio de noticias NEWS desea realizar un software para administrar los artículos que se
 deben publicar. Cada artículo es creado por un autor, el cual debe estar registrado en el
 sistema. La empresa desea que cada artículo pueda ser comentado por los lectores y para
@@ -33,4 +40,14 @@ Nombre, Medio.
 
 
 # DESARROLLO DEL PROGRAMA:
-## Clases utilizadas (atributos y métodos):
+## Clases utilizadas:
+- Persona: Clase base, contiene nombre y DNI de la persona.
+- Autor: Clase derivada de persona, contiene el medio de publicación del autor.
+- Usuario: Clase derivada de persona, contiene la edad del usuario.
+- Comentarios: 
+- Noticias:
+- NEWS: 
+- Archivero: 
+
+
+
