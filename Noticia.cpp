@@ -1,5 +1,5 @@
 #include <iostream>
-#include "noticia.h"
+#include "Noticia.h"
 using namespace std;
 
 //Constructor de la clase Noticia
@@ -11,7 +11,7 @@ Noticia::Noticia(string tit,string desc, int a, int m, int d, Autor autor, Comen
     dia = d;
 }
 //Destructor
-//Noticia::~Noticia(){}
+Noticia::~Noticia(){}
 
 void Noticia::setTitulo(string tit) {
     titulo = tit;
