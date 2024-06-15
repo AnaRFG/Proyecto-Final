@@ -8,6 +8,10 @@ Usuario::Usuario(int id, string nom, int e) : Persona(id, nom) {
     edad = e;
 }
 
+Usuario::Usuario() {
+
+}
+
 void Usuario::setEdad(int e) {
     edad = e;
 }

@@ -6,6 +6,9 @@ Persona::Persona(int id, string nom) {
     dni = id;
     nombre = nom;
 }
+Persona::Persona() {
+
+}
 
 void Persona::setDNI(int id) {
     dni = id;

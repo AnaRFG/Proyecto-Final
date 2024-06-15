@@ -15,6 +15,7 @@ private:
     Autor autor;
     Comentarios comentarios;
 public:
+    Noticia();
     Noticia(string tit, string desc, int a, int m, int d,Autor autor,Comentarios comentarios);
     ~Noticia();
     void setTitulo(string tit);

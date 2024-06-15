@@ -10,6 +10,11 @@ Noticia::Noticia(string tit,string desc, int a, int m, int d, Autor autor, Comen
     mes = m;
     dia = d;
 }
+
+Noticia::Noticia() {
+
+}
+
 //Destructor
 Noticia::~Noticia(){}
 

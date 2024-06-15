@@ -1,3 +1,5 @@
+#ifndef Comentario_h
+#define Comentario_h
 #include <iostream>
 #include "Persona.h"
 #include "Usuario.h"
@@ -18,3 +20,4 @@ public:
     int getNumero();
 
 };
+#endif
