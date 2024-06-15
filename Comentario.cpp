@@ -9,6 +9,10 @@ Comentarios::Comentarios(int id, string nom,int e, int num, string tex, Usuario 
     usuario = usuario;
 }
 
+Comentarios::Comentarios() {
+
+}
+
 Comentarios::~Comentarios(){
 }
 

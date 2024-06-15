@@ -1,6 +1,7 @@
 #include <iostream>
 #include "Autor.h"
 #include "Persona.h"
+
 using namespace std;
 
 //Constructor de la clase Autor que hereda de Persona
@@ -8,7 +9,11 @@ Autor::Autor(int id, string nom, string med) : Persona(id, nom) {
     medio = med;
 }
 
-Autor::~Autor(){
+Autor::Autor() {
+
+}
+
+Autor::~Autor() {
 
 }
 
