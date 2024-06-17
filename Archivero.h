@@ -1,25 +1,21 @@
-#include <iostream>
-#include "Persona.h"
-#include "Autor.h"
-#include "Comentario.h"
-#include "Usuario.h"
+#ifndef Archivero_H
+#define Archivero_H
+
+#include <fstream>
+#include <string>
 #include "Noticia.h"
+#include "Comentario.h"
+
 using namespace std;
 
-class archivero : public Noticia, public Comentario {
-    private:
-    Noticia tit;
-    Noticia desc;
-    Noticia a;
-    Noticia m;
-    Noticia d;
-    Autor autor;
-    Comentarios comentarios;
-
-    public:
-    archivero();
-    archivero(Noticia tit, Noticia desc, Noticia a, Noticia m, Noticia d, Autor autor, Comentarios comentarios);
-    void leerarchivo();
-    void añadirarchivo();
+class Archivos {
+public:
+    void guardarNoticia(Noticia noticia);
+    void guardarComentario(Comentarios comentario);
+    void cargarNoticia(Noticia); //listaClientes[], int &numClientes);
+    void cargarComentario(Comentarios listaTransacciones[], int &numTransacciones);
 };
+
+
+#endif
 
