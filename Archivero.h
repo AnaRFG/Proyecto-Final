@@ -1,9 +1,11 @@
-#ifndef ARCHIVERO_H
-#define ARCHIVERO_H
 
-#include "Noticia.h"
+#ifndef Archivero_H
+#define Archivero_H
+
 #include <fstream>
-#include <iostream>
+#include <string>
+#include "Noticia.h"
+#include "Comentario.h"
 
 class Archivo {
 private:
@@ -20,4 +22,6 @@ public:
 };
 
 #endif
+
+
 

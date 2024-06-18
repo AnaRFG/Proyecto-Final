@@ -55,3 +55,4 @@ void Archivo::leerNoticias() {
     archivoEntrada.clear(); // Limpiar errores de archivo al finalizar la lectura
     archivoEntrada.seekg(0, std::ios::beg); // Volver al principio del archivo para futuras operaciones
 }
+
