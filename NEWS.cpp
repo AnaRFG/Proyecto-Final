@@ -4,7 +4,7 @@
 #include "Autor.h"
 #include "Noticia.h"
 #include "Usuario.h"
-#include "Comentario.h"
+#include "Comentarios.h"
 #include "Persona.h"
 
 using namespace std;

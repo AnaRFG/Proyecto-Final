@@ -1,4 +1,4 @@
-#include "Comentario.h"
+#include "Comentarios.h"
 
 Comentarios::Comentarios(int num, string tex, Usuario usuario) : numero(num), texto(tex), usuario(usuario) {}
 

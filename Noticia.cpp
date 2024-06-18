@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Noticia.h"
-#include "Comentario.h"
+#include "Comentarios.h"
 using namespace std;
 
 //Constructor de la clase Noticia

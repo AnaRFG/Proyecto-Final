@@ -5,7 +5,7 @@
 #include <fstream>
 #include <string>
 #include "Noticia.h"
-#include "Comentario.h"
+#include "Comentarios.h"
 
 class Archivo {
 private:
