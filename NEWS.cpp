@@ -1,4 +1,5 @@
 #include <iostream>
+#include <stdexcept> // Necesario para usar std::invalid_argument
 #include "Archivero.h"
 #include "Autor.h"
 #include "Noticia.h"
@@ -20,100 +21,118 @@ int main() {
     Archivo archivero;
 
     do {
-        cout << "\n\nUsted ha ingresado al sistema de noticias NEWS\n\n";
-        cout << "Por favor, elija su modo de acceso ingresando el número correspondiente:\n\n";
-        cout << "1. Autor\n\n";
-        cout << "2. Usuario - Lector\n\n";
-        cout << "3. Deseo salir del programa. \n\n";
-        cin >> ingreso1;
-        cin.ignore(); // Ignorar nueva línea pendiente después de cin
+        try {
+            cout << "\n\nUsted ha ingresado al sistema de noticias NEWS\n\n";
+            cout << "Por favor, elija su modo de acceso ingresando el número correspondiente:\n\n";
+            cout << "1. Autor\n\n";
+            cout << "2. Usuario - Lector\n\n";
+            cout << "3. Deseo salir del programa. \n\n";
+            cin >> ingreso1;
+            cin.ignore();
 
-        switch (ingreso1) {
-            case 1:
-                cout << "Ingrese el nombre del autor: " << endl;
-                getline(cin, nom);
-                cout << "Ingrese el DNI del autor: " << endl;
-                cin >> id;
-                cin.ignore();
-                cout << "Ingrese el medio al cual pertenece: " << endl;
-                getline(cin, med);
-                autor.setNombre(nom);
-                autor.setDNI(id);
-                autor.setMedio(med);
-                for (int i = 0; i < 5; ++i) {
-                    cout << "Ingrese el titulo de la noticia " << i << ": " << endl;
-                    getline(cin, tit);
-                    cout << "Ingrese la descripcion de la noticia : " << endl;
-                    getline(cin, desc);
-                    cout << "Ingrese el dia de la noticia : " << endl;
-                    cin >> d;
-                    cout << "Ingrese el mes de la noticia : " << endl;
-                    cin >> m;
-                    cout << "Ingrese el año de la noticia : " << endl;
-                    cin >> a;
-                    cin.ignore(); // Ignorar nueva línea pendiente después de cin
-                    noticia[i].setTitulo(tit);
-                    noticia[i].setDescripcion(desc);
-                    noticia[i].setDia(d);
-                    noticia[i].setMes(m);
-                    noticia[i].setAño(a);
-                }
-                archivero.grabarNoticias(noticia, 5);
-                break;
-
-            case 2:
-                cout << "Ingrese el nombre del usuario: " << endl;
-                getline(cin, nom);
-                cout << "Ingrese el DNI del usuario: " << endl;
-                cin >> id;
-                cout << "Ingrese la edad del usuario: " << endl;
-                cin >> e;
-                cin.ignore();
-                usuario.setNombre(nom);
-                usuario.setDNI(id);
-                usuario.setEdad(e);
-                cout << "Por favor, elija la accion que desea realizar ingresando el número correspondiente:\n\n";
-                cout << "1. Lectura\n\n";
-                cout << "2. Comentario\n\n";
-                cin >> ingreso2;
-                cin.ignore();
-
-                switch (ingreso2) {
-                    case 1:
-                        archivero.leerNoticias();
-                        break;
-                    case 2:
-                        for (int i = 0; i < 5; ++i) {
-                            cout << "Titulo de la noticia " << i << ": " << endl;
-                            cout << noticia[i].getTitulo() << endl;
+            switch (ingreso1) {
+                case 1:
+                    cout << "Ingrese el nombre del autor: " << endl;
+                    getline(cin, nom);
+                    cout << "Ingrese el DNI del autor: " << endl;
+                    cin >> id;
+                    cin.ignore();
+                    cout << "Ingrese el medio al cual pertenece: " << endl;
+                    getline(cin, med);
+                    autor.setNombre(nom);
+                    autor.setDNI(id);
+                    autor.setMedio(med);
+                    for (int i = 0; i < 5; ++i) {
+                        cout << "Ingrese el titulo de la noticia " << i << ": " << endl;
+                        getline(cin, tit);
+                        cout << "Ingrese la descripcion de la noticia : " << endl;
+                        getline(cin, desc);
+                        cout << "Ingrese el dia de la noticia : " << endl;
+                        cin >> d;
+                        if (d < 1 || d > 31) {
+                            throw invalid_argument("Día inválido. Debe estar entre 1 y 31.");
                         }
-                        cout << "Ingrese la cantidad de comentarios que desea realizar: " << endl;
-                        cin >> com1;
+                        cout << "Ingrese el mes de la noticia : " << endl;
+                        cin >> m;
+                        if (m < 1 || m > 12) {
+                            throw invalid_argument("Mes inválido. Debe estar entre 1 y 12.");
+                        }
+                        cout << "Ingrese el año de la noticia : " << endl;
+                        cin >> a;
+                        if (a < 0 || a > 2024) {
+                            throw invalid_argument("Año inválido. Debe estar entre 1900 y 2100.");
+                        }
                         cin.ignore();
-                        for (int i = 0; i < com1; ++i) {
-                            cout << "Ingrese sobre que noticia desea realizar un comentario: " << endl;
-                            cin >> num;
+                        noticia[i].setTitulo(tit);
+                        noticia[i].setDescripcion(desc);
+                        noticia[i].setDia(d);
+                        noticia[i].setMes(m);
+                        noticia[i].setAño(a);
+                    }
+                    archivero.grabarNoticias(noticia, 5);
+                    break;
+
+                case 2:
+                    cout << "Ingrese el nombre del usuario: " << endl;
+                    getline(cin, nom);
+                    cout << "Ingrese el DNI del usuario: " << endl;
+                    cin >> id;
+                    cout << "Ingrese la edad del usuario: " << endl;
+                    cin >> e;
+                    cin.ignore();
+                    usuario.setNombre(nom);
+                    usuario.setDNI(id);
+                    usuario.setEdad(e);
+                    cout << "Por favor, elija la accion que desea realizar ingresando el número correspondiente:\n\n";
+                    cout << "1. Lectura\n\n";
+                    cout << "2. Comentario\n\n";
+                    cin >> ingreso2;
+                    cin.ignore();
+
+                    switch (ingreso2) {
+                        case 1:
+                            archivero.leerNoticias();
+                            break;
+                        case 2:
+                            for (int i = 0; i < 5; ++i) {
+                                cout << "Titulo de la noticia " << i << ": " << endl;
+                                cout << noticia[i].getTitulo() << endl;
+                            }
+                            cout << "Ingrese la cantidad de comentarios que desea realizar: " << endl;
+                            cin >> com1;
                             cin.ignore();
-                            cout << "Ingrese el comentario que desea realizar: " << endl;
-                            getline(cin, tex);
-                            comentario.setNumero(num);
-                            comentario.setComentario(tex);
-                        }
-                        break;
-                    default:
-                        cout<<" Opcion no valida, por favor intente nuevamente. "<<endl;
-                        break;
-                }
-                break;
+                            for (int i = 0; i < com1; ++i) {
+                                cout << "Ingrese sobre que noticia desea realizar un comentario: " << endl;
+                                cin >> num;
+                                cin.ignore();
+                                if (num < 0 || num >= 5) {
+                                    throw out_of_range("Índice de noticia fuera de rango.");
+                                }
+                                cout << "Ingrese el comentario que desea realizar: " << endl;
+                                getline(cin, tex);
+                                comentario.setNumero(num);
+                                comentario.setComentario(tex);
+                            }
+                            break;
+                        default:
+                            cout << " Opcion no valida, por favor intente nuevamente. " << endl;
+                            break;
+                    }
+                    break;
 
-            case 3:
-                cout << " Eliminando noticias ..." << endl;
-                archivero.eliminarNoticias();
-                cout<<" Saliendo del programa. "<<endl;
-                break;
+                case 3:
+                    cout << " Eliminando noticias ..." << endl;
+                    archivero.eliminarNoticias();
+                    cout << " Saliendo del programa. " << endl;
+                    break;
 
-            default:
-                cout << "Opción no válida, por favor intente nuevamente." << endl;
+                default:
+                    cout << "Opción no válida, por favor intente nuevamente." << endl;
+            }
+        }
+        catch (const exception &e) {
+            cerr << "Error: " << e.what() << endl;
+            cin.clear();
         }
     } while (ingreso1 != 3);
 
