@@ -14,7 +14,6 @@ public:
     ~Autor();
     string getMedio();
     void setMedio(string med);
-    //void getAutor();
 };
 #endif
 

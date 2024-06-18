@@ -1,5 +1,5 @@
 #include <iostream>
-#include <stdexcept> // Necesario para usar std::invalid_argument
+#include <stdexcept>
 #include "Archivero.h"
 #include "Autor.h"
 #include "Noticia.h"
@@ -18,7 +18,7 @@ int main() {
     Usuario usuario;
     Noticia noticia[5];
     Comentarios comentario;
-    Archivo archivero;
+    Archivo archivo;
 
     do {
         try {
@@ -26,7 +26,8 @@ int main() {
             cout << "Por favor, elija su modo de acceso ingresando el número correspondiente:\n\n";
             cout << "1. Autor\n\n";
             cout << "2. Usuario - Lector\n\n";
-            cout << "3. Deseo salir del programa. \n\n";
+            cout << "3. Eliminar noticias existentes\n\n";
+            cout << "4. Deseo salir del programa. \n\n";
             cin >> ingreso1;
             cin.ignore();
 
@@ -57,7 +58,7 @@ int main() {
                         if (m < 1 || m > 12) {
                             throw invalid_argument("Mes inválido. Debe estar entre 1 y 12.");
                         }
-                        cout << "Ingrese el año de la noticia : " << endl;
+                        cout << "Ingrese el anio de la noticia : " << endl;
                         cin >> a;
                         if (a < 0 || a > 2024) {
                             throw invalid_argument("Año inválido. Debe estar entre 1900 y 2100.");
@@ -69,7 +70,7 @@ int main() {
                         noticia[i].setMes(m);
                         noticia[i].setAño(a);
                     }
-                    archivero.grabarNoticias(noticia, 5);
+                    archivo.grabarNoticias(noticia, 5);
                     break;
 
                 case 2:
@@ -83,7 +84,7 @@ int main() {
                     usuario.setNombre(nom);
                     usuario.setDNI(id);
                     usuario.setEdad(e);
-                    cout << "Por favor, elija la accion que desea realizar ingresando el número correspondiente:\n\n";
+                    cout << "Por favor, elija la acción que desea realizar ingresando el número correspondiente:\n\n";
                     cout << "1. Lectura\n\n";
                     cout << "2. Comentario\n\n";
                     cin >> ingreso2;
@@ -91,18 +92,18 @@ int main() {
 
                     switch (ingreso2) {
                         case 1:
-                            archivero.leerNoticias();
+                            archivo.leerNoticias();
                             break;
                         case 2:
                             for (int i = 0; i < 5; ++i) {
-                                cout << "Titulo de la noticia " << i << ": " << endl;
+                                cout << "Título de la noticia " << i << ": " << endl;
                                 cout << noticia[i].getTitulo() << endl;
                             }
                             cout << "Ingrese la cantidad de comentarios que desea realizar: " << endl;
                             cin >> com1;
                             cin.ignore();
                             for (int i = 0; i < com1; ++i) {
-                                cout << "Ingrese sobre que noticia desea realizar un comentario: " << endl;
+                                cout << "Ingrese sobre qué noticia desea realizar un comentario: " << endl;
                                 cin >> num;
                                 cin.ignore();
                                 if (num < 0 || num >= 5) {
@@ -112,29 +113,37 @@ int main() {
                                 getline(cin, tex);
                                 comentario.setNumero(num);
                                 comentario.setComentario(tex);
+                                comentario.setUsuario(usuario);
+                                noticia[num].setComentarios(comentario);
                             }
+                            archivo.grabarNoticias(noticia, 5);
                             break;
                         default:
-                            cout << " Opcion no valida, por favor intente nuevamente. " << endl;
+                            cout << "Opción no válida, por favor intente nuevamente." << endl;
                             break;
                     }
                     break;
 
                 case 3:
-                    cout << " Eliminando noticias ..." << endl;
-                    archivero.eliminarNoticias();
-                    cout << " Saliendo del programa. " << endl;
+                    cout << "Eliminando noticias ..." << endl;
+                    archivo.eliminarNoticias();
+                    cout << "Noticias eliminadas." << endl;
+                    break;
+
+                case 4:
+                    cout << "Cerrando el programa. ¡Adiós!" << endl;
                     break;
 
                 default:
                     cout << "Opción no válida, por favor intente nuevamente." << endl;
+                    break;
             }
-        }
-        catch (const exception &e) {
+        } catch (const exception &e) {
             cerr << "Error: " << e.what() << endl;
             cin.clear();
         }
-    } while (ingreso1 != 3);
+    } while (ingreso1 != 4);
 
     return 0;
 }
+

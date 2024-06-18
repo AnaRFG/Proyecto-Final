@@ -19,6 +19,7 @@ public:
     void grabarNoticias(Noticia noticias[], int numNoticias);
     void leerNoticias();
     void eliminarNoticias();
+    void cerrarArchivo();
 };
 
 #endif

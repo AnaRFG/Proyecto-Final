@@ -7,8 +7,8 @@ using namespace std;
 
 Archivo::Archivo() {
     try {
-        archivoSalida.open("noticias.txt", ios::app); // Abre el archivo para añadir al final
-        archivoEntrada.open("noticias.txt"); // Abre el archivo para lectura
+        archivoSalida.open("noticias.txt", ios::app);
+        archivoEntrada.open("noticias.txt");
 
         if (!archivoSalida.is_open() || !archivoEntrada.is_open()) {
             throw runtime_error("No se pudo abrir el archivo 'noticias.txt'");
@@ -19,8 +19,7 @@ Archivo::Archivo() {
 }
 
 Archivo::~Archivo() {
-    archivoSalida.close();
-    archivoEntrada.close();
+    cerrarArchivo();
 }
 
 void Archivo::grabarNoticias(Noticia noticias[], int numNoticias) {
@@ -35,7 +34,7 @@ void Archivo::grabarNoticias(Noticia noticias[], int numNoticias) {
             archivoSalida << "Usuario: " << noticias[i].getComentarios().getUsuario().getNombre() << "\n";
             archivoSalida << "\n";
         }
-        archivoSalida.flush(); // Forzar la escritura inmediata al archivo
+        archivoSalida.flush();
     } catch (const exception &e) {
         cerr << "Error al escribir en el archivo: " << e.what() << endl;
     }
@@ -46,19 +45,19 @@ void Archivo::leerNoticias() {
         string linea;
         while (getline(archivoEntrada, linea)) {
             if (linea.find("Titulo: ") != string::npos) {
-                string titulo = linea.substr(8); // Obtener el título (después de "Titulo: ")
-                getline(archivoEntrada, linea); // Leer siguiente línea (Descripción)
-                string descripcion = linea.substr(13); // Obtener la descripción (después de "Descripcion: ")
-                getline(archivoEntrada, linea); // Leer siguiente línea (Fecha)
+                string titulo = linea.substr(8);
+                getline(archivoEntrada, linea);
+                string descripcion = linea.substr(13);
+                getline(archivoEntrada, linea);
                 int dia, mes, año;
-                sscanf(linea.c_str(), "Fecha: %d/%d/%d", &dia, &mes, &año); // Leer día, mes y año
-                getline(archivoEntrada, linea); // Leer siguiente línea (Comentario)
-                string comentario = linea.substr(12); // Obtener el comentario (después de "Comentario: ")
-                getline(archivoEntrada, linea); // Leer siguiente línea (Usuario)
-                string nombreUsuario = linea.substr(9); // Obtener el nombre del usuario (después de "Usuario: ")
+                sscanf(linea.c_str(), "Fecha: %d/%d/%d", &dia, &mes, &año);
+                getline(archivoEntrada, linea);
+                string comentario = linea.substr(12);
+                getline(archivoEntrada, linea);
+                string nombreUsuario = linea.substr(9);
 
                 // Crear y mostrar la noticia con comentarios
-                Usuario usuario(0, nombreUsuario, 0); // Crear un usuario (necesitas ajustarlo según tus definiciones)
+                Usuario usuario(0, nombreUsuario, 0);
                 Comentarios comentarios(0, comentario, usuario);
                 Noticia noticia(titulo, descripcion, año, mes, dia, Autor(), comentarios);
 
@@ -69,10 +68,27 @@ void Archivo::leerNoticias() {
                 cout << "Usuario: " << noticia.getComentarios().getUsuario().getNombre() << "\n\n";
             }
         }
-        archivoEntrada.clear(); // Limpiar errores de archivo al finalizar la lectura
-        archivoEntrada.seekg(0, ios::beg); // Volver al principio del archivo para futuras operaciones
+        archivoEntrada.clear(); // Limpia errores al finalizar la lectura
     } catch (const exception &e) {
         cerr << "Error al leer el archivo: " << e.what() << endl;
+    }
+}
 
+void Archivo::eliminarNoticias() {
+    cerrarArchivo();
+    ofstream file("noticias.txt", ios::out | ios::trunc);
+    if (!file.is_open()) {
+        cerr << "No se pudo abrir el archivo para eliminar su contenido." << endl;
+        return;
+    }
+    file.close();
+}
+
+void Archivo::cerrarArchivo() {
+    if (archivoSalida.is_open()) {
+        archivoSalida.close();
+    }
+    if (archivoEntrada.is_open()) {
+        archivoEntrada.close();
     }
 }
