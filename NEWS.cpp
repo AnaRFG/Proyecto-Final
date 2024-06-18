@@ -17,6 +17,7 @@ int main() {
     Usuario usuario;
     Noticia noticia[5];
     Comentarios comentario;
+    Archivo archivero;
 
     do {
         cout << "\n\nUsted ha ingresado al sistema de noticias NEWS\n\n";
@@ -57,6 +58,7 @@ int main() {
                     noticia[i].setMes(m);
                     noticia[i].setAño(a);
                 }
+                archivero.grabarNoticias(noticia, 5);
                 break;
 
             case 2:
@@ -78,18 +80,7 @@ int main() {
 
                 switch (ingreso2) {
                     case 1:
-                        for (int i = 0; i < 5; ++i) {
-                            cout << "Titulo de la noticia " << i << ": " << endl;
-                            cout << noticia[i].getTitulo() << endl;
-                            cout << "Descripcion : " << endl;
-                            cout << noticia[i].getDescripcion() << endl;
-                            cout << "Dia : " << endl;
-                            cout << noticia[i].getDia() << endl;
-                            cout << "Mes : " << endl;
-                            cout << noticia[i].getMes() << endl;
-                            cout << "Año : " << endl;
-                            cout << noticia[i].getAño() << endl;
-                        }
+                        archivero.leerNoticias();
                         break;
                     case 2:
                         for (int i = 0; i < 5; ++i) {
@@ -109,11 +100,16 @@ int main() {
                             comentario.setComentario(tex);
                         }
                         break;
+                    default:
+                        cout<<" Opcion no valida, por favor intente nuevamente. "<<endl;
+                        break;
                 }
                 break;
 
             case 3:
-                cout << "Saliendo del programa." << endl;
+                cout << " Eliminando noticias ..." << endl;
+                archivero.eliminarNoticias();
+                cout<<" Saliendo del programa. "<<endl;
                 break;
 
             default:

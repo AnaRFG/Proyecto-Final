@@ -1,26 +1,18 @@
-#include <iostream>
 #include "Comentario.h"
 
-using namespace std;
+Comentarios::Comentarios(int num, string tex, Usuario usuario) : numero(num), texto(tex), usuario(usuario) {}
 
-Comentarios::Comentarios(int id, string nom,int e, int num, string tex, Usuario usuario) : Usuario(id, nom, e) {
-    numero = num;
-    texto = tex;
-    usuario = usuario;
-}
-
-Comentarios::Comentarios() {
+Comentarios::Comentarios(){
 
 }
 
-Comentarios::~Comentarios(){
-}
+Comentarios::~Comentarios() {}
 
 void Comentarios::setComentario(string tex) {
     texto = tex;
 }
 
-string Comentarios::getComentario() {
+string Comentarios::getComentario() const {
     return texto;
 }
 
@@ -28,6 +20,14 @@ void Comentarios::setNumero(int num) {
     numero = num;
 }
 
-int Comentarios::getNumero() {
+int Comentarios::getNumero() const {
     return numero;
+}
+
+void Comentarios::setUsuario(Usuario usr) {
+    usuario = usuario;
+}
+
+Usuario Comentarios::getUsuario() const {
+    return usuario;
 }

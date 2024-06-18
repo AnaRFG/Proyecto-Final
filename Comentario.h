@@ -1,23 +1,28 @@
-#ifndef Comentario_h
-#define Comentario_h
+#ifndef Comentarios_h
+#define Comentarios_h
+
 #include <iostream>
-#include "Persona.h"
 #include "Usuario.h"
 
-using namespace std;
-
-class Comentarios : public Usuario {
+class Comentarios {
 private:
     int numero;
     string texto;
+    Usuario usuario;
+
 public:
-    Comentarios(int id, string nom, int e, int num, string tex, Usuario usuario);
+    Comentarios(int num, string tex, Usuario usuario);
     Comentarios();
     ~Comentarios();
-    void setComentario(string tex);
-    string getComentario();
-    void setNumero(int num);
-    int getNumero();
 
+    void setComentario(string tex);
+    string getComentario() const;
+
+    void setNumero(int num);
+    int getNumero() const;
+
+    void setUsuario(Usuario usuario);
+    Usuario getUsuario() const;
 };
+
 #endif
