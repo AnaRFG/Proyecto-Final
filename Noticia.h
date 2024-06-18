@@ -4,7 +4,7 @@
 #include <iostream>
 #include "Persona.h"
 #include "Autor.h"
-#include "Comentario.h"
+#include "Comentarios.h"
 #include "Usuario.h"
 
 using namespace std;
