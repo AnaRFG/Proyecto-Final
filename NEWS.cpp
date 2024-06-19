@@ -85,11 +85,11 @@ int main() {
                     usuario.setNombre(nom);
                     usuario.setDNI(id);
                     usuario.setEdad(e);
-                    cout << "Por favor, elija la acción que desea realizar ingresando el número correspondiente:\n\n";
+                    cout << "Por favor, elija la acción que desea realizar ingresando el numero correspondiente:\n\n";
                     cout << "1. Lectura\n\n";
                     cout << "2. Comentario\n\n";
                     cout << "3. Listar noticias publicadas en el anio\n\n";
-                    cout << "4. Listar noticias publicadas el último mes\n\n";
+                    cout << "4. Listar noticias publicadas el ultimo mes\n\n";
                     cout << "5. Listar noticias por autor\n\n";
                     cin >> ingreso2;
                     cin.ignore();
@@ -100,18 +100,18 @@ int main() {
                             break;
                         case 2:
                             for (int i = 0; i < 5; ++i) {
-                                cout << "Título de la noticia " << i << ": " << endl;
+                                cout << "Titulo de la noticia " << i << ": " << endl;
                                 cout << noticia[i].getTitulo() << endl;
                             }
                             cout << "Ingrese la cantidad de comentarios que desea realizar: " << endl;
                             cin >> com1;
                             cin.ignore();
                             for (int i = 0; i < com1; ++i) {
-                                cout << "Ingrese sobre qué noticia desea realizar un comentario: " << endl;
+                                cout << "Ingrese sobre que noticia desea realizar un comentario: " << endl;
                                 cin >> num;
                                 cin.ignore();
                                 if (num < 0 || num >= 5) {
-                                    throw out_of_range("Índice de noticia fuera de rango.");
+                                    throw out_of_range("Indice de noticia fuera de rango.");
                                 }
                                 cout << "Ingrese el comentario que desea realizar: " << endl;
                                 getline(cin, tex);
@@ -137,7 +137,7 @@ int main() {
                             archivo.listarNoticiasPorAutor(nom);
                             break;
                         default:
-                            cout << "Opción no válida, por favor intente nuevamente." << endl;
+                            cout << "Opción no valida, por favor intente nuevamente." << endl;
                             break;
                     }
                     break;
@@ -149,11 +149,11 @@ int main() {
                     break;
 
                 case 4:
-                    cout << "Cerrando el programa. ¡Adiós!" << endl;
+                    cout << "Cerrando el programa. ¡Adios!" << endl;
                     break;
 
                 default:
-                    cout << "Opción no válida, por favor intente nuevamente." << endl;
+                    cout << "Opcion no valida, por favor intente nuevamente." << endl;
                     break;
             }
         } catch (const exception &e) {
