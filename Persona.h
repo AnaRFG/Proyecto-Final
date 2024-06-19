@@ -1,3 +1,6 @@
+#ifndef Persona_h
+#define Persona_h
+
 #include <iostream>
 
 using namespace std;
@@ -7,6 +10,8 @@ protected:
     int dni;
     string nombre;
 public:
+    Persona();
+
     Persona(int id, string nom);
 
     void setDNI(int id);
@@ -17,3 +22,4 @@ public:
 
     string getNombre();
 };
+#endif

@@ -1,5 +1,6 @@
 #include <iostream>
-#include "noticia.h"
+#include "Noticia.h"
+#include "Comentarios.h"
 using namespace std;
 
 //Constructor de la clase Noticia
@@ -10,8 +11,13 @@ Noticia::Noticia(string tit,string desc, int a, int m, int d, Autor autor, Comen
     mes = m;
     dia = d;
 }
+
+Noticia::Noticia() {
+
+}
+
 //Destructor
-//Noticia::~Noticia(){}
+Noticia::~Noticia(){}
 
 void Noticia::setTitulo(string tit) {
     titulo = tit;
@@ -53,12 +59,18 @@ int Noticia::getAño() {
     return año;
 }
 
-/*void Noticia::mostrarNoticia(){
-    cout << "Noticia:" << endl;
-    cout << "Título: " << getTitulo() << endl;
-    cout << "Detalle: " << getDescripcion() << endl;
-    cout << "Fecha: " << getDia() << "/" << getMes() << "/" << getAño() << endl;
-    cout << "Autor: " << autor.getNombre() << " (" << autor.getMedio() << ")"<<" " << autor.getDNI() <<endl;
+void Noticia::setAutor(Autor autor) {
+    autor = autor;
 }
-*/
 
+Autor Noticia::getAutor() const {
+    return autor;
+}
+
+void Noticia::setComentarios(Comentarios comentarios) {
+    comentarios = comentarios;
+}
+
+Comentarios Noticia::getComentarios() const {
+    return comentarios;
+}

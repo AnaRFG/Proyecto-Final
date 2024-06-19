@@ -1,3 +1,5 @@
+#ifndef Autor_h
+#define Autor_h
 #include <iostream>
 #include "Persona.h"
 using namespace std;
@@ -12,6 +14,6 @@ public:
     ~Autor();
     string getMedio();
     void setMedio(string med);
-    //void getAutor();
 };
+#endif
 
