@@ -74,3 +74,5 @@ void Noticia::setComentarios(Comentarios comentarios) {
 Comentarios Noticia::getComentarios() const {
     return comentarios;
 }
+
+

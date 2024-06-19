@@ -20,6 +20,10 @@ public:
     void leerNoticias();
     void eliminarNoticias();
     void cerrarArchivo();
+    void listarNoticiasPorAño(int año);
+    void listarNoticiasUltimoMes();
+    void listarNoticiasPorAutor(const string& nombreAutor);
+    void mostrarNoticiaYComentarios(const string& tituloNoticia);
 };
 
 #endif

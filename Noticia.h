@@ -18,6 +18,7 @@ private:
     int dia;
     Autor autor;
     Comentarios comentarios;
+    bool tieneComentario;
 public:
     Noticia();
 
@@ -52,6 +53,7 @@ public:
     void setComentarios(Comentarios com);
 
     Comentarios getComentarios() const;
+
 };
 
 #endif

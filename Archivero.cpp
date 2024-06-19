@@ -92,3 +92,128 @@ void Archivo::cerrarArchivo() {
         archivoEntrada.close();
     }
 }
+
+void Archivo::listarNoticiasPorAño(int año) {
+    try {
+        string linea;
+        while (getline(archivoEntrada, linea)) {
+            if (linea.find("Titulo: ") != string::npos) {
+                string titulo = linea.substr(8);
+                getline(archivoEntrada, linea);
+                string descripcion = linea.substr(13);
+                getline(archivoEntrada, linea);
+                int dia, mes, ano;
+                sscanf(linea.c_str(), "Fecha: %d/%d/%d", &dia, &mes, &ano);
+                if (ano == año) {
+                    getline(archivoEntrada, linea);
+                    string nombreAutor = linea.substr(7);
+                    getline(archivoEntrada, linea);
+                    string comentario = linea.substr(12);
+                    getline(archivoEntrada, linea);
+                    string nombreUsuario = linea.substr(9);
+
+                    // Crear y mostrar la noticia con comentarios
+                    Usuario usuario(0, nombreUsuario, 0);
+                    Comentarios comentarios(0, comentario, usuario);
+                    Autor autor(0, nombreAutor, "");
+                    Noticia noticia(titulo, descripcion, ano, mes, dia, autor, comentarios);
+
+                    cout << "Titulo: " << noticia.getTitulo() << "\n";
+                    cout << "Descripcion: " << noticia.getDescripcion() << "\n";
+                    cout << "Fecha: " << noticia.getDia() << "/" << noticia.getMes() << "/" << noticia.getAño() << "\n";
+                    cout << "Autor: " << noticia.getAutor().getNombre() << "\n";
+                    cout << "Comentario: " << noticia.getComentarios().getComentario() << "\n";
+                    cout << "Usuario: " << noticia.getComentarios().getUsuario().getNombre() << "\n\n";
+                }
+            }
+        }
+        archivoEntrada.clear();
+    } catch (const exception &e) {
+        cerr << "Error al leer el archivo: " << e.what() << endl;
+    }
+}
+
+void Archivo::listarNoticiasUltimoMes() {
+    try {
+        int mesActual = 6;
+        int añoActual = 2024;
+
+        string linea;
+        while (getline(archivoEntrada, linea)) {
+            if (linea.find("Titulo: ") != string::npos) {
+                string titulo = linea.substr(8);
+                getline(archivoEntrada, linea);
+                string descripcion = linea.substr(13);
+                getline(archivoEntrada, linea);
+                int dia, mes, ano;
+                sscanf(linea.c_str(), "Fecha: %d/%d/%d", &dia, &mes, &ano);
+                if (mes == mesActual && ano == añoActual) {
+                    getline(archivoEntrada, linea);
+                    string nombreAutor = linea.substr(7);
+                    getline(archivoEntrada, linea);
+                    string comentario = linea.substr(12);
+                    getline(archivoEntrada, linea);
+                    string nombreUsuario = linea.substr(9);
+
+                    // Crear y mostrar la noticia con comentarios
+                    Usuario usuario(0, nombreUsuario, 0);
+                    Comentarios comentarios(0, comentario, usuario);
+                    Autor autor(0, nombreAutor, "");
+                    Noticia noticia(titulo, descripcion, ano, mes, dia, autor, comentarios);
+
+                    cout << "Titulo: " << noticia.getTitulo() << "\n";
+                    cout << "Descripcion: " << noticia.getDescripcion() << "\n";
+                    cout << "Fecha: " << noticia.getDia() << "/" << noticia.getMes() << "/" << noticia.getAño() << "\n";
+                    cout << "Autor: " << noticia.getAutor().getNombre() << "\n";
+                    cout << "Comentario: " << noticia.getComentarios().getComentario() << "\n";
+                    cout << "Usuario: " << noticia.getComentarios().getUsuario().getNombre() << "\n\n";
+                }
+            }
+        }
+        archivoEntrada.clear();
+    } catch (const exception &e) {
+        cerr << "Error al leer el archivo: " << e.what() << endl;
+    }
+}
+
+void Archivo::listarNoticiasPorAutor(const string& nombreAutor) {
+    try {
+        string linea;
+        while (getline(archivoEntrada, linea)) {
+            if (linea.find("Titulo: ") != string::npos) {
+                string titulo = linea.substr(8);
+                getline(archivoEntrada, linea);
+                string descripcion = linea.substr(13);
+                getline(archivoEntrada, linea);
+                int dia, mes, ano;
+                sscanf(linea.c_str(), "Fecha: %d/%d/%d", &dia, &mes, &ano);
+                getline(archivoEntrada, linea);
+                string nombreAutorArchivo = linea.substr(7);
+                getline(archivoEntrada, linea);
+                string comentario = linea.substr(12);
+                getline(archivoEntrada, linea);
+                string nombreUsuario = linea.substr(9);
+
+                if (nombreAutorArchivo == nombreAutor) {
+                    // Crear y mostrar la noticia con comentarios
+                    Usuario usuario(0, nombreUsuario, 0);
+                    Comentarios comentarios(0, comentario, usuario);
+                    Autor autor(0, nombreAutorArchivo, "");
+                    Noticia noticia(titulo, descripcion, ano, mes, dia, autor, comentarios);
+
+                    cout << "Titulo: " << noticia.getTitulo();
+                    cout << "Descripcion: " << noticia.getDescripcion() << "\n";
+                    cout << "Fecha: " << noticia.getDia() << "/" << noticia.getMes() << "/" << noticia.getAño() << "\n";
+                    cout << "Autor: " << noticia.getAutor().getNombre() << "\n";
+                    cout << "Comentario: " << noticia.getComentarios().getComentario() << "\n";
+                    cout << "Usuario: " << noticia.getComentarios().getUsuario().getNombre() << "\n\n";
+                }
+            }
+        }
+        archivoEntrada.clear();
+    } catch (const exception &e) {
+        cerr << "Error al leer el archivo: " << e.what() << endl;
+    }
+}
+
+

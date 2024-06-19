@@ -69,6 +69,7 @@ int main() {
                         noticia[i].setDia(d);
                         noticia[i].setMes(m);
                         noticia[i].setAño(a);
+                        noticia[i].setAutor(autor);
                     }
                     archivo.grabarNoticias(noticia, 5);
                     break;
@@ -87,6 +88,9 @@ int main() {
                     cout << "Por favor, elija la acción que desea realizar ingresando el número correspondiente:\n\n";
                     cout << "1. Lectura\n\n";
                     cout << "2. Comentario\n\n";
+                    cout << "3. Listar noticias publicadas en el anio\n\n";
+                    cout << "4. Listar noticias publicadas el último mes\n\n";
+                    cout << "5. Listar noticias por autor\n\n";
                     cin >> ingreso2;
                     cin.ignore();
 
@@ -118,6 +122,20 @@ int main() {
                             }
                             archivo.grabarNoticias(noticia, 5);
                             break;
+                        case 3:
+                            cout << "Ingrese el año de las noticias que desea listar: " << endl;
+                            cin >> a;
+                            cin.ignore();
+                            archivo.listarNoticiasPorAño(a);
+                            break;
+                        case 4:
+                            archivo.listarNoticiasUltimoMes();
+                            break;
+                        case 5:
+                            cout << "Ingrese el nombre del autor cuyas noticias desea listar: " << endl;
+                            getline(cin, nom);
+                            archivo.listarNoticiasPorAutor(nom);
+                            break;
                         default:
                             cout << "Opción no válida, por favor intente nuevamente." << endl;
                             break;
@@ -146,4 +164,3 @@ int main() {
 
     return 0;
 }
-

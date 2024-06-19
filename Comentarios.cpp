@@ -25,7 +25,7 @@ int Comentarios::getNumero() const {
 }
 
 void Comentarios::setUsuario(Usuario usr) {
-    usuario = usuario;
+    usuario = usr;
 }
 
 Usuario Comentarios::getUsuario() const {
