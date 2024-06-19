@@ -149,7 +149,7 @@ int main() {
                     break;
 
                 case 4:
-                    cout << "Cerrando el programa. ¡Adios!" << endl;
+                    cout << "Cerrando el programa." << endl;
                     break;
 
                 default:
